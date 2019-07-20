@@ -30,6 +30,6 @@ b(2,2).
 
 % END OF THE EXAMPLE EPISTEMIC MODEL
 
-is_formula(X) :- propositions(Y), member(X,Y).
-is_formula(X) :- X is (Y,Z), is_formula(X), is_formula(Y).
+is_formula(X) :- propositions(Y), member(Y,X).
+
 
