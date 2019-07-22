@@ -6,7 +6,8 @@
 
 agents([a,b]).
 propositions([p,q]).
-
+print("this is printed").
+    
 % begin model
 
 worlds(2).
@@ -30,6 +31,10 @@ b(2,2).
 
 % END OF THE EXAMPLE EPISTEMIC MODEL
 
-is_formula(X) :- propositions(Y), member(X,Y).
-is_formula(X) :- X is (Y,Z), is_formula(X), is_formula(Y).
+is_formula(X) :- propositions(Y), member(X,Y).                    %propositions
+is_formula(X) :- X = [Y,Z], is_formula(Y), is_formula(Z).         %conjunction
+is_formula(X) :- X = ['n',Y], is_formula(Y).                      %negation
+is_formula(X) :- X = [Y,Z], agents(A), member(Y,A), is_formula(Z).%knowledge
 
+satisfies(X,Y) :- worlds(Y), X < Y, is_formula(Y),
+    
