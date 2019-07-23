@@ -14,8 +14,8 @@ worlds(2).
 % there are two worlds in this model
 
 
-p(1).
-q(2).
+valuation(1,[p]).
+valuation(2.[q]).
 % world 1 satisfies p, world 2 satisfies q.
 
 a(1,1).
@@ -36,5 +36,7 @@ is_formula(X) :- X = [Y,Z], is_formula(Y), is_formula(Z).         %conjunction
 is_formula(X) :- X = ['n',Y], is_formula(Y).                      %negation
 is_formula(X) :- X = [Y,Z], agents(A), member(Y,A), is_formula(Z).%knowledge
 
-satisfies(X,Y) :- worlds(Y), X < Y, is_formula(Y),
-    
+satisfies(X,Y) :- worlds(Worlds), X < Worlds, is_formula(Y),		  
+		propositions(Z), member(Y,Z),
+		valuation(X,P), member(Y,P).
+
