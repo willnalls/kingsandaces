@@ -10,12 +10,12 @@ print("this is printed").
     
 % begin model
 
-worlds(2).
+worlds([w1, w2]).
 % there are two worlds in this model
 
 
-valuation(1,[p]).
-valuation(2,[q]).
+valuation(w1,[p]).
+valuation(w2,[q]).
 % world 1 satisfies p, world 2 satisfies q.
 
 relations(a,[[1],[2]]).
@@ -36,12 +36,12 @@ is_formula(X) :- X = [Y,Z], agents(A), member(Y,A), is_formula(Z).%possibility i
 
 % checks that X,Y is a world, formula pair
 
-world_formula(X,Y) :- worlds(Worlds), X =< Worlds, 1 =< X,  is_formula(Y).
+world_formula(X,Y) :- worlds(W), member(X,W), is_formula(Y).
 
 % reachability predicate: X can see Z from Y
 
 reachable(X,Y,Z) :- agents(A), member(X,A),  %X is an agent
-		    worlds(W), 1 =< Y, 1 =< Z, Y =< W, Z =< W, %Y, Z are worlds
+		    worlds(W), member(Y,W), member(Z,W), %Y, Z are worlds
 		    relations(X, P), member(P1,P), member(Y,P1), member(Z,P1).
 
 % satisfaction predicate definedon world, formula pairs
