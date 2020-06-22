@@ -1,0 +1,40 @@
+body {
+	background-color: red;
+	background-size: cover;
+}
+
+
+#top_bar {
+	padding-top: 5%;
+}
+
+#game_title {
+	margin-top: 4px;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	vertical-align: center;
+	align-content: center;
+}
+
+#game_exit {
+	text-align: right;
+}
+
+#game_instructions {
+	border-color: black;
+	border-width: 4px;
+	border-style: solid;
+	vertical-align: top;
+}
+
+#game_table {
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+	vertical-align: top;
+}
+
+#game_start {
+	height: 40px;
+}
