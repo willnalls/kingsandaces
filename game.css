@@ -1,0 +1,66 @@
+body {
+	background: url(https://images.unsplash.com/photo-1592833872694-f8b3ee26e958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+}
+
+
+
+
+#game_base {
+	background: yellow;
+	width: 95%;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+}
+
+#game_title {
+	margin-top: 4px;
+	background: blue;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	vertical-align: center;
+	align-content: center;
+}
+
+#game_exit {
+	text-align: right;
+}
+
+#game_instructions {
+	margin-top: 3px;
+	margin-left: 3px;
+	background: blue;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+	vertical-align: top;
+	height: 50%;
+}
+
+#game_table {
+	margin-top: 3px;
+	margin-left: 3px;
+	background: blue;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+	vertical-align: top;
+}
+
+#game_start {
+	margin-top: 3px;
+	margin-left: 3px;
+	background: blue;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+	vertical-align: top;
+	height: 40px;
+}
+
+
+
+div {
+	border: 1px solid black;
+}
