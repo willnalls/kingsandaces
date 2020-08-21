@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Queens and Aces - Start Game</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <title>Queens and Aces - Start Game</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="game.css">
+  <link rel="stylesheet" type="text/css" href="css/game.css">
 
 <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="java/script.js"></script>
 </head>
+  
 <body>
 
-
-<!-- Title line, links to home -->
-<div class="container" id="game_base">
-  <div class="row" id="top-bar">
-    <div class="col-md-4" id="game_title">
-      <h2 align="center"> Aces and Queens </h2>
-    </div>
-    <div class="col-md-8" id="game_exit"> 
-      <a href="index.html"> Exit Game </a>
-    </div>
+<div class="container" align="center" id="page_base">
+  <!-- First row -->
+  <div class="row" id="row-1">
+    <div class="col-sm-4" id="game_title"> <h2> Aces and Queens </h2> </div>
+    <div class="col-sm-6"> </div>
+    <div class="col-md-2" id="game_exit"> <a href="index.html"> Exit Game </a> </div>
   </div>
-  <div class="row">
+  <!-- Second row -->
+  <div class="row" id="row-2">
     <div class="col-md-4" id="game_instructions">
       <h3> Instructions for moderator to read aloud. </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctu.
+      </p>
     </div>
     <div class="col-md-8" id="game_table">
-      <h3> Here is where the cards will go. </h3>
+      <div class="row">
+        <span class="game_hand" id="player_1">
+          <span class="game_card">Card 1</span> <span class="game_card">Card 2</span>
+        </span>
+        <span class="game_hand" id="player_2">
+          <span class="game_card">Card 1</span> <span class="game_card">Card 2</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="game_hand" id="player_3">
+          <span class="game_card">Card 1</span> <span class="game_card">Card 2</span>
+        </span>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-4" id="game_start">
-      <h3> Button to start game. </h3>
+  
+  
+  <!-- Third row -->
+  <div class="row" id="row-3">
+    <div class="col-sm-4" id="game_start">
+      <button>
+        Start Game
+      </button>
     </div>
-    <div class="col-md-8" id="game_history">
+    <div class="col" id="game_history">
       <h3> History of game thus far. </h3>
     </div>
   </div>

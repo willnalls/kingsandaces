@@ -1,0 +1,40 @@
+
+
+// identify html objects
+var round = 0
+var startButton = getElementById("game_start")
+var handCards = [[0,0], [0,0], [0,0]]
+
+
+function genAllHands(){
+	for ()
+}
+
+// outputs an array of length six, describing which cards go to whom
+// takes as input the number of rounds the game should take (1, 2, or 3)
+function getCards(numRounds){
+	console.log("Assigning Cards");
+	// this integer represents which player 'diverges' from the other two
+	var player = Math.floor(Math.random() * 3);
+	if (numRounds == 1){
+		// select easy configuration
+		console.log("Unique hand goes to player " + player.toString());
+		handCards[player] = [1,1];
+		console.log(handCards)
+	}
+	else if (numRounds == 2){
+		// select medium configuration
+		// config 1: [[0,0],[1,1],[0,1]]
+	}
+	else if (numRounds == 3){
+
+	}
+	else {
+		console.log("Error: input to getCards should be 1, 2, or 3.")
+	}
+}
+
+
+function startGame(){
+	console.log("Starting the game!")
+}
